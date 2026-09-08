@@ -1,0 +1,46 @@
+{
+  "variant": "improved",
+  "kind": "agent_evaluation",
+  "suite_id": "terminal-bench-pro-local-port-v2",
+  "revision": "874af409da6aafebccbf3bc5bb41a2fa4d78784d",
+  "provider": "openai",
+  "port_version": "2.0.0",
+  "local_corrections": [
+    "sudoku-explicit-io-contract-and-clue-checks",
+    "blockchain-original-ledger-oracle",
+    "immutable-input-fixtures"
+  ],
+  "execution_mode": "local-port",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python_version": "3.13.15",
+  "hostlimits": "unrestricted",
+  "model": "cyankiwi/Qwen3.5-4B-AWQ-4bit",
+  "attempts": 1,
+  "expected_tasks": [
+    "extract-paper-metadata-to-json",
+    "python-sudoku-solver-backtracking",
+    "detect-corrupted-blockchain-transaction",
+    "implement-go-board-analyzer",
+    "python-sokoban-bfs-solver",
+    "recover-encrypted-db-credentials",
+    "advanced-json-to-rfc4180-csv-converter",
+    "implement-depgraph-dependency-resolver",
+    "implement-lz77-file-compressor",
+    "implement-nonogram-puzzle-solver"
+  ],
+  "manifest_sha256": "21f333a94929d6ce9cf0e184a8865ed5d5feca1cc33b3c6536b771ae2edb30a6",
+  "agent_source_path": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/my_agent.py",
+  "source_sha256": "3517afedbcb46d4ff64a401fb74f347afcf98d1e4e5a59b88b64a5b5ee6aa327",
+  "code_sha256": "3517afedbcb46d4ff64a401fb74f347afcf98d1e4e5a59b88b64a5b5ee6aa327",
+  "agent_import_path": "my_agent:solve_task",
+  "limits": {
+    "max_steps": 30,
+    "max_seconds": 300.0,
+    "command_timeout": 10,
+    "max_output_tokens": 10000
+  },
+  "started_at": "2026-09-08T07:43:43.109443+00:00",
+  "status": "finished",
+  "finished_at": "2026-09-08T07:54:39.509067+00:00",
+  "exit_code": 0
+}

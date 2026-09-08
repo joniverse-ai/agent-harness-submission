@@ -1,0 +1,5 @@
+{"event": "model_start", "elapsed_seconds": 0.0006, "step": 1}
+{"event": "tool_start", "elapsed_seconds": 6.1524, "name": "list_files", "call_id": "vllm-49237634"}
+{"event": "tool_end", "elapsed_seconds": 6.1538, "name": "list_files", "call_id": "vllm-49237634", "ok": true}
+{"event": "model_start", "elapsed_seconds": 6.1539, "step": 2}
+{"event": "run_end", "elapsed_seconds": 7.8705, "status": "completed", "metrics": {"model_calls": 2, "tool_calls": 1, "tool_errors": 0, "input_tokens": 3682, "output_tokens": 70, "elapsed_seconds": 7.8704297080112156, "usage_known": true}}

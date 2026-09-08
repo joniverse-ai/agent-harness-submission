@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="13" time="0.367" timestamp="2026-09-08T16:43:00.186852+09:00" hostname="johnny-mbp.local"><testcase classname="test_outputs" name="test_script_exists" time="0.001"><failure message="AssertionError: Script /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py not found&#10;assert False&#10; +  where False = &lt;function exists at 0x105abafc0&gt;('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py')&#10; +    where &lt;function exists at 0x105abafc0&gt; = &lt;module 'posixpath' (frozen)&gt;.exists&#10; +      where &lt;module 'posixpath' (frozen)&gt; = os.path">def test_script_exists():
+&gt;       assert os.path.exists(SCRIPT_PATH), f"Script {SCRIPT_PATH} not found"
+E       AssertionError: Script /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py not found
+E       assert False
+E        +  where False = &lt;function exists at 0x105abafc0&gt;('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py')
+E        +    where &lt;function exists at 0x105abafc0&gt; = &lt;module 'posixpath' (frozen)&gt;.exists
+E        +      where &lt;module 'posixpath' (frozen)&gt; = os.path
+
+../../verifier/test_outputs.py:46: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_basic_solution_run" time="0.028"><failure message="AssertionError: Script failed with output: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/.venv/bin/python3: can't open file '/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory&#10;  &#10;assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_basic_solution_run(setup_teardown):
+        content = "ROWS: 1\nCOLS: 1\nROW_CLUES:\n1\nCOL_CLUES:\n0\n"
+        result = run_solver_on_content(content)
+&gt;       assert result.returncode == 0, f"Script failed with output: {result.stderr}"
+E       AssertionError: Script failed with output: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/.venv/bin/python3: can't open file '/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:51: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_solvable_puzzle_run" time="0.022"><failure message="AssertionError: Script failed with output: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/.venv/bin/python3: can't open file '/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory&#10;  &#10;assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_solvable_puzzle_run(setup_teardown):
+        content = "ROWS: 1\nCOLS: 1\nROW_CLUES:\n1\nCOL_CLUES:\n1\n"
+        result = run_solver_on_content(content)
+&gt;       assert result.returncode == 0, f"Script failed with output: {result.stderr}"
+E       AssertionError: Script failed with output: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/.venv/bin/python3: can't open file '/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:61: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_missing_input_file" time="0.023" /><testcase classname="test_outputs" name="test_malformed_input" time="0.052" /><testcase classname="test_outputs" name="test_edge_case_empty_puzzle" time="0.027"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_edge_case_empty_puzzle(setup_teardown):
+        result = run_solver_on_file('empty_3x3.txt')
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:81: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_checkerboard_5x5" time="0.024"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_checkerboard_5x5(setup_teardown):
+        result = run_solver_on_file('checkerboard_5x5.txt')
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:91: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_full_3x3" time="0.023"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_full_3x3(setup_teardown):
+        result = run_solver_on_file('full_3x3.txt')
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:107: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_unsolvable_2x2" time="0.022"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_unsolvable_2x2(setup_teardown):
+        result = run_solver_on_file('unsolvable_2x2.txt')
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:121: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_hollow_box_5x5" time="0.022"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_hollow_box_5x5(setup_teardown):
+        result = run_solver_on_file('hollow_box_5x5.txt')
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:129: AssertionError</failure></testcase><testcase classname="test_outputs" name="test_invalid_dimensions" time="0.023" /><testcase classname="test_outputs" name="test_mismatched_clues" time="0.022" /><testcase classname="test_outputs" name="test_large_numbers_in_clues" time="0.024"><failure message="assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n&quot;).returncode">setup_teardown = None
+
+    def test_large_numbers_in_clues(setup_teardown):
+        # Clue larger than dimension
+        content = "ROWS: 1\nCOLS: 1\nROW_CLUES:\n5\nCOL_CLUES:\n1\n"
+        result = run_solver_on_content(content)
+        # Should be unsolvable (NO SOLUTION) or fail validation.
+        # Logic-wise: 5 &gt; 1, so check_line will never match.
+        # So it should be NO SOLUTION.
+&gt;       assert result.returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스...bs/baseline/implement-nonogram-puzzle-solver__1/workspace/app/solve_puzzle.py': [Errno 2] No such file or directory\n").returncode
+
+../../verifier/test_outputs.py:163: AssertionError</failure></testcase></testsuite></testsuites>

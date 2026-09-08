@@ -1,0 +1,11 @@
+{"event": "model_start", "elapsed_seconds": 0.001, "step": 1}
+{"event": "tool_start", "elapsed_seconds": 7.7127, "name": "read_file", "call_id": "vllm-feda8add"}
+{"event": "tool_end", "elapsed_seconds": 7.7163, "name": "read_file", "call_id": "vllm-feda8add", "ok": false}
+{"event": "model_start", "elapsed_seconds": 7.7166, "step": 2}
+{"event": "tool_start", "elapsed_seconds": 9.8158, "name": "list_files", "call_id": "vllm-b3dad696"}
+{"event": "tool_end", "elapsed_seconds": 9.82, "name": "list_files", "call_id": "vllm-b3dad696", "ok": true}
+{"event": "model_start", "elapsed_seconds": 9.8204, "step": 3}
+{"event": "tool_start", "elapsed_seconds": 13.664, "name": "read_file", "call_id": "vllm-2e202603"}
+{"event": "tool_end", "elapsed_seconds": 13.6653, "name": "read_file", "call_id": "vllm-2e202603", "ok": true}
+{"event": "model_start", "elapsed_seconds": 13.6654, "step": 4}
+{"event": "run_end", "elapsed_seconds": 201.0649, "status": "completed", "metrics": {"model_calls": 4, "tool_calls": 3, "tool_errors": 1, "input_tokens": 5049, "output_tokens": 1289, "elapsed_seconds": 201.06489245800185, "usage_known": true}}

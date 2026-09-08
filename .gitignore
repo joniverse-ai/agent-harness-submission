@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Secrets
+.env
+*.key
+
+# Benchmark caches
+.benchmark-cache/
+agent-terminal-benchmark/.benchmark-cache/
+
+# Upstream benchmark source (not for redistribution)
+agent-terminal-benchmark/jobs/*/source/benchmark/upstream/
+agent-terminal-benchmark/benchmark/upstream/
+
+# Trial workspace files (upstream fixtures, not for redistribution)
+agent-terminal-benchmark/jobs/**/workspace/
+# Trial verifier code (upstream test code)
+agent-terminal-benchmark/jobs/**/verifier/test_outputs.py
+agent-terminal-benchmark/jobs/**/verifier/__pycache__/
+# Source copies of upstream
+agent-terminal-benchmark/jobs/**/source/
+
+# uv/pip
+agent-terminal-benchmark/.venv/
+
+# Session data (personal)
+harness/sessions/*.json
+
+# PDF lecture materials (not for redistribution)
+*.pdf

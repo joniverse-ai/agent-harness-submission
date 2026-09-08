@@ -1,0 +1,221 @@
+FFFFFFFFFFFFF                                                            [100%]
+=================================== FAILURES ===================================
+______________________ test_manifest_loading_and_decoding ______________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps2ihz6vn/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps2ihz6vn/root_config.json')
+
+    def test_manifest_loading_and_decoding(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "pkgA", "1.0.0")
+        create_config(config_path, {"pkgA": ">=1.0.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:52: TypeError
+_________________________ test_linear_dependency_chain _________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpfrrncy_7/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpfrrncy_7/root_config.json')
+
+    def test_linear_dependency_chain(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": ">=1.0.0"})
+        create_manifest(registry, "B", "1.0.0", {"C": ">=1.0.0"})
+        create_manifest(registry, "C", "1.0.0")
+        create_config(config_path, {"A": ">=1.0.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:65: TypeError
+_____________________ test_complex_transitive_dependencies _____________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp70hy0run/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp70hy0run/root_config.json')
+
+    def test_complex_transitive_dependencies(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": ">=1.0", "C": ">=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"D": ">=1.0"})
+        create_manifest(registry, "C", "1.0.0", {"D": ">=1.0"})
+        create_manifest(registry, "D", "1.0.0", {"E": ">=1.0"})
+        create_manifest(registry, "E", "1.0.0")
+        create_config(config_path, {"A": ">=1.0.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:80: TypeError
+____________________ test_diamond_dependency_compatibility _____________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp8r8lguca/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp8r8lguca/root_config.json')
+
+    def test_diamond_dependency_compatibility(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": ">=1.0", "C": ">=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"D": ">=1.5"})
+        create_manifest(registry, "C", "1.0.0", {"D": ">=1.0"})
+        create_manifest(registry, "D", "2.0.0")
+        create_config(config_path, {"A": ">=1.0.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:99: TypeError
+________________________ test_version_constraint_logic _________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp_5rroilu/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp_5rroilu/root_config.json')
+
+    def test_version_constraint_logic(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0")
+        create_manifest(registry, "A", "2.0.0")
+        create_manifest(registry, "A", "3.0.0")
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:111: TypeError
+______________________ test_circular_dependency_detection ______________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpipwhh6ws/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpipwhh6ws/root_config.json')
+
+    def test_circular_dependency_detection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": ">=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"A": ">=1.0"})
+        create_config(config_path, {"A": ">=1.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:131: TypeError
+_______________________ test_version_conflict_detection ________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpk4qktjc2/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpk4qktjc2/root_config.json')
+
+    def test_version_conflict_detection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"C": ">=2.0"})
+        create_manifest(registry, "B", "1.0.0", {"C": "<1.5"})
+        create_manifest(registry, "C", "1.0.0")
+        create_manifest(registry, "C", "2.0.0")
+    
+        create_config(config_path, {"A": ">=1.0", "B": ">=1.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:144: TypeError
+________________________ test_missing_package_handling _________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpuyb8ucsf/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpuyb8ucsf/root_config.json')
+
+    def test_missing_package_handling(workspace):
+        registry, config_path = workspace
+        create_config(config_path, {"NonExistent": ">=1.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:152: TypeError
+_________________________ test_topological_sort_order __________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps4ewy053/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps4ewy053/root_config.json')
+
+    def test_topological_sort_order(workspace):
+        registry, config_path = workspace
+        for i in range(1, 4):
+            create_manifest(registry, str(i), "1.0", {str(i+1): ">=1.0"})
+        create_manifest(registry, "4", "1.0")
+    
+        create_config(config_path, {"1": ">=1.0"})
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:163: TypeError
+_________________________ test_lockfile_output_format __________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpkqy9tf3h/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpkqy9tf3h/root_config.json')
+
+    def test_lockfile_output_format(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0")
+        create_config(config_path, {"A": ">=1.0.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:173: TypeError
+___________________________ test_empty_dependencies ____________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpvycvod4t/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpvycvod4t/root_config.json')
+
+    def test_empty_dependencies(workspace):
+        registry, config_path = workspace
+        create_config(config_path, {})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:188: TypeError
+__________________________ test_self_dependency_error __________________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp3z5ufzz5/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp3z5ufzz5/root_config.json')
+
+    def test_self_dependency_error(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"A": ">=1.0"})
+        create_config(config_path, {"A": ">=1.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:197: TypeError
+____________________ test_multiple_constraints_intersection ____________________
+
+workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp2sg439dp/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp2sg439dp/root_config.json')
+
+    def test_multiple_constraints_intersection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "Target", "1.0.0")
+        create_manifest(registry, "Target", "2.0.0")
+        create_manifest(registry, "Target", "3.0.0")
+    
+        create_manifest(registry, "A", "1.0", {"Target": ">1.0"})
+        create_manifest(registry, "B", "1.0", {"Target": "<3.0"})
+    
+        create_config(config_path, {"A": ">=1.0", "B": ">=1.0"})
+    
+>       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:212: TypeError
+- generated xml file: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-depgraph-dependency-resolver__1/verifier/results.xml -
+=========================== short test summary info ============================
+FAILED ../../verifier/test_outputs.py::test_manifest_loading_and_decoding - T...
+FAILED ../../verifier/test_outputs.py::test_linear_dependency_chain - TypeErr...
+FAILED ../../verifier/test_outputs.py::test_complex_transitive_dependencies
+FAILED ../../verifier/test_outputs.py::test_diamond_dependency_compatibility
+FAILED ../../verifier/test_outputs.py::test_version_constraint_logic - TypeEr...
+FAILED ../../verifier/test_outputs.py::test_circular_dependency_detection - T...
+FAILED ../../verifier/test_outputs.py::test_version_conflict_detection - Type...
+FAILED ../../verifier/test_outputs.py::test_missing_package_handling - TypeEr...
+FAILED ../../verifier/test_outputs.py::test_topological_sort_order - TypeErro...
+FAILED ../../verifier/test_outputs.py::test_lockfile_output_format - TypeErro...
+FAILED ../../verifier/test_outputs.py::test_empty_dependencies - TypeError: '...
+FAILED ../../verifier/test_outputs.py::test_self_dependency_error - TypeError...
+FAILED ../../verifier/test_outputs.py::test_multiple_constraints_intersection
+13 failed in 0.09s

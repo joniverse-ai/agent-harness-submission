@@ -1,0 +1,52 @@
+{
+  "id": "bd0149af85ff4e0b97b566c816267fbe",
+  "task_name": "advanced-json-to-rfc4180-csv-converter",
+  "trial_name": "advanced-json-to-rfc4180-csv-converter__1",
+  "started_at": "2026-09-08T07:35:07.079355+00:00",
+  "finished_at": "2026-09-08T07:40:08.053284+00:00",
+  "agent_result": {
+    "status": "timeout",
+    "answer": "Stopped at the total time limit; inspect actual tool state",
+    "metrics": {
+      "model_calls": 4,
+      "tool_calls": 3,
+      "tool_errors": 1,
+      "input_tokens": 9620,
+      "output_tokens": 147,
+      "elapsed_seconds": 300.0054561249999,
+      "usage_known": false
+    },
+    "n_input_tokens": null,
+    "n_output_tokens": null,
+    "n_cache_tokens": null,
+    "cost_usd": null
+  },
+  "fixture_sha256": {
+    "home/user/sales.json": "3dddadc287695c7285e869b70384a0fe5554d8ffcb640b2a7d27a03fd5fdd877"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0
+    },
+    "fixture_changes": [],
+    "reward": 0,
+    "checks_passed": 0,
+    "checks_total": 90,
+    "checks_failed": 90,
+    "checks_errors": 0,
+    "checks_skipped": 0,
+    "cleanup_incomplete": false,
+    "exit_code": 1,
+    "timed_out": false,
+    "truncated": false,
+    "details": {
+      "junit": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/advanced-json-to-rfc4180-csv-converter__1/verifier/results.xml",
+      "stdout": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/advanced-json-to-rfc4180-csv-converter__1/verifier/stdout.txt",
+      "stderr": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/advanced-json-to-rfc4180-csv-converter__1/verifier/stderr.txt"
+    }
+  },
+  "exception_info": {
+    "exception_type": "AgentIncomplete",
+    "message": "timeout"
+  }
+}

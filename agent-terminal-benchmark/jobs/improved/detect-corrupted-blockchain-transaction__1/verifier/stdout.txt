@@ -1,0 +1,121 @@
+FEEEE.EEEE.                                                              [100%]
+==================================== ERRORS ====================================
+___________________ ERROR at setup of test_02_format_is_csv ____________________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+_______________ ERROR at setup of test_03_transaction_id_format ________________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+________________ ERROR at setup of test_04_field_name_validity _________________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+______________ ERROR at setup of test_05_incorrect_value_is_hash _______________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+_____________ ERROR at setup of test_07_result_matches_ledger_data _____________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+______ ERROR at setup of test_08_verify_identified_error_is_actual_error _______
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+__________ ERROR at setup of test_09_no_false_positives_before_target __________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+_________________ ERROR at setup of test_10_solution_accuracy __________________
+
+    @pytest.fixture
+    def result_content():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt'), "Result file missing"
+E       AssertionError: Result file missing
+E       assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:8: AssertionError
+=================================== FAILURES ===================================
+_____________________________ test_01_file_exists ______________________________
+
+    def test_01_file_exists():
+>       assert os.path.exists('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E       AssertionError: assert False
+E        +  where False = <function exists at 0x103d36fc0>('/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/workspace/app/result.txt')
+E        +    where <function exists at 0x103d36fc0> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+../../verifier/test_outputs.py:19: AssertionError
+- generated xml file: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/verifier/results.xml -
+=========================== short test summary info ============================
+FAILED ../../verifier/test_outputs.py::test_01_file_exists - AssertionError: ...
+ERROR ../../verifier/test_outputs.py::test_02_format_is_csv - AssertionError:...
+ERROR ../../verifier/test_outputs.py::test_03_transaction_id_format - Asserti...
+ERROR ../../verifier/test_outputs.py::test_04_field_name_validity - Assertion...
+ERROR ../../verifier/test_outputs.py::test_05_incorrect_value_is_hash - Asser...
+ERROR ../../verifier/test_outputs.py::test_07_result_matches_ledger_data - As...
+ERROR ../../verifier/test_outputs.py::test_08_verify_identified_error_is_actual_error
+ERROR ../../verifier/test_outputs.py::test_09_no_false_positives_before_target
+ERROR ../../verifier/test_outputs.py::test_10_solution_accuracy - AssertionEr...
+1 failed, 2 passed, 8 errors in 0.04s

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="13" time="0.086" timestamp="2026-09-08T16:40:16.973592+09:00" hostname="johnny-mbp.local"><testcase classname="test_outputs" name="test_manifest_loading_and_decoding" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps2ihz6vn/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps2ihz6vn/root_config.json')
+
+    def test_manifest_loading_and_decoding(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "pkgA", "1.0.0")
+        create_config(config_path, {"pkgA": "&gt;=1.0.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:52: TypeError</failure></testcase><testcase classname="test_outputs" name="test_linear_dependency_chain" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpfrrncy_7/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpfrrncy_7/root_config.json')
+
+    def test_linear_dependency_chain(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": "&gt;=1.0.0"})
+        create_manifest(registry, "B", "1.0.0", {"C": "&gt;=1.0.0"})
+        create_manifest(registry, "C", "1.0.0")
+        create_config(config_path, {"A": "&gt;=1.0.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:65: TypeError</failure></testcase><testcase classname="test_outputs" name="test_complex_transitive_dependencies" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp70hy0run/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp70hy0run/root_config.json')
+
+    def test_complex_transitive_dependencies(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": "&gt;=1.0", "C": "&gt;=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"D": "&gt;=1.0"})
+        create_manifest(registry, "C", "1.0.0", {"D": "&gt;=1.0"})
+        create_manifest(registry, "D", "1.0.0", {"E": "&gt;=1.0"})
+        create_manifest(registry, "E", "1.0.0")
+        create_config(config_path, {"A": "&gt;=1.0.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:80: TypeError</failure></testcase><testcase classname="test_outputs" name="test_diamond_dependency_compatibility" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp8r8lguca/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp8r8lguca/root_config.json')
+
+    def test_diamond_dependency_compatibility(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": "&gt;=1.0", "C": "&gt;=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"D": "&gt;=1.5"})
+        create_manifest(registry, "C", "1.0.0", {"D": "&gt;=1.0"})
+        create_manifest(registry, "D", "2.0.0")
+        create_config(config_path, {"A": "&gt;=1.0.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:99: TypeError</failure></testcase><testcase classname="test_outputs" name="test_version_constraint_logic" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp_5rroilu/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp_5rroilu/root_config.json')
+
+    def test_version_constraint_logic(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0")
+        create_manifest(registry, "A", "2.0.0")
+        create_manifest(registry, "A", "3.0.0")
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:111: TypeError</failure></testcase><testcase classname="test_outputs" name="test_circular_dependency_detection" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpipwhh6ws/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpipwhh6ws/root_config.json')
+
+    def test_circular_dependency_detection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"B": "&gt;=1.0"})
+        create_manifest(registry, "B", "1.0.0", {"A": "&gt;=1.0"})
+        create_config(config_path, {"A": "&gt;=1.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:131: TypeError</failure></testcase><testcase classname="test_outputs" name="test_version_conflict_detection" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpk4qktjc2/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpk4qktjc2/root_config.json')
+
+    def test_version_conflict_detection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"C": "&gt;=2.0"})
+        create_manifest(registry, "B", "1.0.0", {"C": "&lt;1.5"})
+        create_manifest(registry, "C", "1.0.0")
+        create_manifest(registry, "C", "2.0.0")
+    
+        create_config(config_path, {"A": "&gt;=1.0", "B": "&gt;=1.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:144: TypeError</failure></testcase><testcase classname="test_outputs" name="test_missing_package_handling" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpuyb8ucsf/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpuyb8ucsf/root_config.json')
+
+    def test_missing_package_handling(workspace):
+        registry, config_path = workspace
+        create_config(config_path, {"NonExistent": "&gt;=1.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:152: TypeError</failure></testcase><testcase classname="test_outputs" name="test_topological_sort_order" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps4ewy053/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmps4ewy053/root_config.json')
+
+    def test_topological_sort_order(workspace):
+        registry, config_path = workspace
+        for i in range(1, 4):
+            create_manifest(registry, str(i), "1.0", {str(i+1): "&gt;=1.0"})
+        create_manifest(registry, "4", "1.0")
+    
+        create_config(config_path, {"1": "&gt;=1.0"})
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:163: TypeError</failure></testcase><testcase classname="test_outputs" name="test_lockfile_output_format" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpkqy9tf3h/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpkqy9tf3h/root_config.json')
+
+    def test_lockfile_output_format(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0")
+        create_config(config_path, {"A": "&gt;=1.0.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:173: TypeError</failure></testcase><testcase classname="test_outputs" name="test_empty_dependencies" time="0.001"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpvycvod4t/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmpvycvod4t/root_config.json')
+
+    def test_empty_dependencies(workspace):
+        registry, config_path = workspace
+        create_config(config_path, {})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:188: TypeError</failure></testcase><testcase classname="test_outputs" name="test_self_dependency_error" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp3z5ufzz5/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp3z5ufzz5/root_config.json')
+
+    def test_self_dependency_error(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "A", "1.0.0", {"A": "&gt;=1.0"})
+        create_config(config_path, {"A": "&gt;=1.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:197: TypeError</failure></testcase><testcase classname="test_outputs" name="test_multiple_constraints_intersection" time="0.002"><failure message="TypeError: 'NoneType' object is not callable">workspace = ('/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp2sg439dp/registry', '/var/folders/c2/mh313vss56n3rp3463q5zvdr0000gn/T/tmp2sg439dp/root_config.json')
+
+    def test_multiple_constraints_intersection(workspace):
+        registry, config_path = workspace
+        create_manifest(registry, "Target", "1.0.0")
+        create_manifest(registry, "Target", "2.0.0")
+        create_manifest(registry, "Target", "3.0.0")
+    
+        create_manifest(registry, "A", "1.0", {"Target": "&gt;1.0"})
+        create_manifest(registry, "B", "1.0", {"Target": "&lt;3.0"})
+    
+        create_config(config_path, {"A": "&gt;=1.0", "B": "&gt;=1.0"})
+    
+&gt;       resolver = DependencyResolver(registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not callable
+
+../../verifier/test_outputs.py:212: TypeError</failure></testcase></testsuite></testsuites>

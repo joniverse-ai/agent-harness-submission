@@ -1,0 +1,8 @@
+{"event": "model_start", "elapsed_seconds": 0.0005, "step": 1}
+{"event": "tool_start", "elapsed_seconds": 4.8998, "name": "list_files", "call_id": "vllm-7cf81111"}
+{"event": "tool_end", "elapsed_seconds": 4.9035, "name": "list_files", "call_id": "vllm-7cf81111", "ok": true}
+{"event": "model_start", "elapsed_seconds": 4.9037, "step": 2}
+{"event": "tool_start", "elapsed_seconds": 7.1469, "name": "list_files", "call_id": "vllm-8c80f126"}
+{"event": "tool_end", "elapsed_seconds": 7.1553, "name": "list_files", "call_id": "vllm-8c80f126", "ok": true}
+{"event": "model_start", "elapsed_seconds": 7.1557, "step": 3}
+{"event": "run_end", "elapsed_seconds": 8.7883, "status": "completed", "metrics": {"model_calls": 3, "tool_calls": 2, "tool_errors": 0, "input_tokens": 5404, "output_tokens": 79, "elapsed_seconds": 8.788253291990259, "usage_known": true}}

@@ -1,0 +1,62 @@
+{
+  "id": "1b1a80207c654a9b9140f9896b795668",
+  "task_name": "recover-encrypted-db-credentials",
+  "trial_name": "recover-encrypted-db-credentials__1",
+  "started_at": "2026-09-08T07:35:01.183453+00:00",
+  "finished_at": "2026-09-08T07:35:07.071250+00:00",
+  "agent_result": {
+    "status": "completed",
+    "answer": "Let me check the workspace structure more carefully.",
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 1,
+      "tool_errors": 0,
+      "input_tokens": 2948,
+      "output_tokens": 48,
+      "elapsed_seconds": 5.584396000005654,
+      "usage_known": true
+    },
+    "n_input_tokens": 2948,
+    "n_output_tokens": 48,
+    "n_cache_tokens": null,
+    "cost_usd": null
+  },
+  "fixture_sha256": {
+    "db/.disk_blocks/.metadata": "034bfcceb0eed907585afa042d0ffbd1c86a9db60e5dad90ff5b643996ebf35d",
+    "db/.disk_blocks/block_000.bin": "0caf8d5bbd7a2afbc3369386311731003afafe92f882d54f2682eab81aac4ec5",
+    "db/.disk_blocks/block_001.bin": "c1b4898bdc272c41f6a90bfe4e4589696bc047328c88801ae16a14b2fefde9d9",
+    "db/.disk_blocks/block_002.bin": "7e1e71a19123772cee65ae4502fa2843f1f74204e1ca51ff364c0490f391726f",
+    "db/.disk_blocks/block_003.bin": "e45ae0580e8f0bea1b432e7a7c69ac18125912ff402ccf580d4ffb8fb9758816",
+    "db/.disk_blocks/block_004.bin": "cce2c62515416a66172b296b02ad850dd67cbdeadaef1cab4aa5576da603b20b",
+    "db/.disk_blocks/block_005.bin": "f397db662568ed05308b5a63df0359de14c5a16e4643441f2d484ceac21d767a",
+    "db/.disk_blocks/block_006.bin": "13b8231996b8a2e2250d3ce4151b679fb935f16619cfc005f01c254e6d1bbe50",
+    "db/.disk_blocks/block_007.bin": "f8d2b94f13e8d50f9b55972bcae00fd1d86f30788189cbe3d0b2fe78985019e3",
+    "db/.disk_blocks/block_garbage_1000.bin": "d64955b2cb1507a5652fd67b1a1889fd092e53c6d34181b23fe0bd92f0158a51",
+    "db/.disk_blocks/block_garbage_255.bin": "566b1526f4d8d6c892fec7a3a4aa205f0e875c7a1bb4a3fc28f575588c11ba2f",
+    "db/.disk_blocks/block_garbage_256.bin": "6d7b44a8600a6431f5090ae42a0f16b0a8f7a9861b5c27a1f2f0994e80eaf194",
+    "db/.disk_blocks/block_garbage_999.bin": "8340435f2d37c19dd6072a4694a34481f1ed5bcbba3630c09a588a6490049026",
+    "db/.recovery_notes.txt": "6dc99981133f2892b2148be531f85bc685588b251d0a8e9895c8a72842dcce54"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0
+    },
+    "fixture_changes": [],
+    "reward": 0,
+    "checks_passed": 0,
+    "checks_total": 30,
+    "checks_failed": 30,
+    "checks_errors": 0,
+    "checks_skipped": 0,
+    "cleanup_incomplete": false,
+    "exit_code": 1,
+    "timed_out": false,
+    "truncated": false,
+    "details": {
+      "junit": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/recover-encrypted-db-credentials__1/verifier/results.xml",
+      "stdout": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/recover-encrypted-db-credentials__1/verifier/stdout.txt",
+      "stderr": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/recover-encrypted-db-credentials__1/verifier/stderr.txt"
+    }
+  },
+  "exception_info": null
+}

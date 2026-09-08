@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+# jobs/ and reports/ are included for submission
+.sessions/
+.cache/
+
+.harness/
+
+.harness*/
+
+.benchmark-cache/

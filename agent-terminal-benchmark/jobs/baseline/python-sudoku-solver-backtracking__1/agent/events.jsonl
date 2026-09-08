@@ -1,0 +1,12 @@
+{"event": "model_start", "elapsed_seconds": 0.0004, "step": 1}
+{"event": "tool_start", "elapsed_seconds": 9.5651, "name": "read_file", "call_id": "vllm-5e079a3c"}
+{"event": "tool_end", "elapsed_seconds": 9.5691, "name": "read_file", "call_id": "vllm-5e079a3c", "ok": false}
+{"event": "model_start", "elapsed_seconds": 9.5694, "step": 2}
+{"event": "tool_start", "elapsed_seconds": 11.8765, "name": "list_files", "call_id": "vllm-68517c8b"}
+{"event": "tool_end", "elapsed_seconds": 11.8789, "name": "list_files", "call_id": "vllm-68517c8b", "ok": true}
+{"event": "model_start", "elapsed_seconds": 11.8791, "step": 3}
+{"event": "tool_start", "elapsed_seconds": 14.6524, "name": "read_file", "call_id": "vllm-6f950574"}
+{"event": "tool_end", "elapsed_seconds": 14.6538, "name": "read_file", "call_id": "vllm-6f950574", "ok": true}
+{"event": "model_start", "elapsed_seconds": 14.6539, "step": 4}
+{"event": "run_error", "elapsed_seconds": 69.8181, "error_type": "ValueError"}
+{"event": "run_end", "elapsed_seconds": 69.8189, "status": "failed", "metrics": {"model_calls": 4, "tool_calls": 3, "tool_errors": 1, "input_tokens": 7185, "output_tokens": 838, "elapsed_seconds": 69.81889258300362, "usage_known": false}}

@@ -1,0 +1,181 @@
+FFFFFFFFFFFFFFFF                                                         [100%]
+=================================== FAILURES ===================================
+___________________ TestGoAnalyzer.test_capture_race_semeai ____________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_capture_race_semeai>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+___________________ TestGoAnalyzer.test_donut_shape_capture ____________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_donut_shape_capture>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+___________________ TestGoAnalyzer.test_donut_shape_survival ___________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_donut_shape_survival>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+__________________ TestGoAnalyzer.test_group_capture_complex ___________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_group_capture_complex>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+___________________ TestGoAnalyzer.test_group_capture_simple ___________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_group_capture_simple>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_______________________ TestGoAnalyzer.test_init_default _______________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_init_default>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+___________________ TestGoAnalyzer.test_invalid_coordinates ____________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_invalid_coordinates>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+____________________ TestGoAnalyzer.test_linting_compliance ____________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_linting_compliance>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+___________________ TestGoAnalyzer.test_load_malformed_json ____________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_load_malformed_json>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_____________________ TestGoAnalyzer.test_load_valid_json ______________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_load_valid_json>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_________________ TestGoAnalyzer.test_performance_large_board __________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_performance_large_board>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+__________________ TestGoAnalyzer.test_shared_liberties_logic __________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_shared_liberties_logic>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_______________ TestGoAnalyzer.test_single_stone_capture_center ________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_single_stone_capture_center>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_______________ TestGoAnalyzer.test_single_stone_capture_corner ________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_single_stone_capture_corner>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+________________ TestGoAnalyzer.test_single_stone_capture_edge _________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_single_stone_capture_edge>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+_____________________ TestGoAnalyzer.test_static_analysis ______________________
+
+self = <test_outputs.TestGoAnalyzer testMethod=test_static_analysis>
+
+    def setUp(self):
+>       self.analyzer = GoBoardAnalyzer()
+                        ^^^^^^^^^^^^^^^
+E       NameError: name 'GoBoardAnalyzer' is not defined
+
+../../verifier/test_outputs.py:18: NameError
+- generated xml file: /Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline/implement-go-board-analyzer__1/verifier/results.xml -
+=========================== short test summary info ============================
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_capture_race_semeai
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_donut_shape_capture
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_donut_shape_survival
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_group_capture_complex
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_group_capture_simple
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_init_default - Na...
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_invalid_coordinates
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_linting_compliance
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_load_malformed_json
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_load_valid_json
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_performance_large_board
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_shared_liberties_logic
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_single_stone_capture_center
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_single_stone_capture_corner
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_single_stone_capture_edge
+FAILED ../../verifier/test_outputs.py::TestGoAnalyzer::test_static_analysis
+16 failed in 0.07s

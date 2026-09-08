@@ -1,0 +1,52 @@
+{
+  "id": "a425ea8283bd41919449b5b09fac8d4b",
+  "task_name": "detect-corrupted-blockchain-transaction",
+  "trial_name": "detect-corrupted-blockchain-transaction__1",
+  "started_at": "2026-09-08T07:45:13.804093+00:00",
+  "finished_at": "2026-09-08T07:50:14.009091+00:00",
+  "agent_result": {
+    "status": "timeout",
+    "answer": "Stopped at the total time limit; inspect actual tool state",
+    "metrics": {
+      "model_calls": 14,
+      "tool_calls": 13,
+      "tool_errors": 6,
+      "input_tokens": 129112,
+      "output_tokens": 2771,
+      "elapsed_seconds": 300.004036792001,
+      "usage_known": false
+    },
+    "n_input_tokens": null,
+    "n_output_tokens": null,
+    "n_cache_tokens": null,
+    "cost_usd": null
+  },
+  "fixture_sha256": {
+    "app/blockchain_ledger.json": "9462ad2a46cc778474f7c29af6d6729d4ada731ee2125ccc3c403c6d88cbc86e"
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0
+    },
+    "fixture_changes": [],
+    "reward": 0,
+    "checks_passed": 2,
+    "checks_total": 11,
+    "checks_failed": 1,
+    "checks_errors": 8,
+    "checks_skipped": 0,
+    "cleanup_incomplete": false,
+    "exit_code": 1,
+    "timed_out": false,
+    "truncated": false,
+    "details": {
+      "junit": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/verifier/results.xml",
+      "stdout": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/verifier/stdout.txt",
+      "stderr": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/improved/detect-corrupted-blockchain-transaction__1/verifier/stderr.txt"
+    }
+  },
+  "exception_info": {
+    "exception_type": "AgentIncomplete",
+    "message": "timeout"
+  }
+}

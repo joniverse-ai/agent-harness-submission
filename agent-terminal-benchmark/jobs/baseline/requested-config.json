@@ -1,0 +1,14 @@
+{
+  "job": "/Users/johnny/Documents/모두의연구소-LMS/06_AI Agent 파해치기_Agt1/6.나만의 에이전트 하네스 만들기/agent-terminal-benchmark/jobs/baseline",
+  "options": {
+    "provider": "openai",
+    "model": "cyankiwi/Qwen3.5-4B-AWQ-4bit",
+    "agent": "my_agent:solve_task",
+    "attempts": 1,
+    "max_steps": 20,
+    "max_seconds": 300.0,
+    "command_timeout": 10,
+    "max_output_tokens": 10000,
+    "self_check": false
+  }
+}
